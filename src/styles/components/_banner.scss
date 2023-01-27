@@ -18,19 +18,19 @@
 
   &--home{
     padding: 4.5rem 0;
-    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/home-banner.jpg') no-repeat center;
+    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/home-banner.jpg') no-repeat center;
     background-size: cover;
   }
 
   &--favorite{
     padding: 3.5rem 0;
-    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/favorite-banner.jpg') no-repeat center;
+    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/favorite-banner.jpg') no-repeat center;
     background-size: cover;
   }
 
   &--resto{
     padding: 3.5rem 0;
-    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/resto-banner.jpg') no-repeat center;
+    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/resto-banner.jpg') no-repeat center;
     background-size: cover;
   }
 

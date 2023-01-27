@@ -11,6 +11,11 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 
 const FavoriteRestoIdb = {
   async getResto(id) {
+    if (!id) {
+      return;
+    }
+
+    // eslint-disable-next-line consistent-return
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
 
@@ -19,6 +24,12 @@ const FavoriteRestoIdb = {
   },
 
   async putResto(resto) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!resto.hasOwnProperty('id')) {
+      return;
+    }
+
+    // eslint-disable-next-line consistent-return
     return (await dbPromise).put(OBJECT_STORE_NAME, resto);
   },
 
