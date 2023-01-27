@@ -6,6 +6,7 @@
   "scripts": {
     "test": "karma start",
     "test-lint": "eslint --ext .js ./src",
+    "test-e2e": "codeceptjs run --steps",
     "start-serve": "http-server dist",
     "start-build": "webpack --config webpack.prod.js",
     "start-dev": "webpack-dev-server --config webpack.dev.js",
@@ -20,6 +21,7 @@
     "@babel/preset-env": "^7.18.2",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
+    "codeceptjs": "^3.3.7",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.2.2",
@@ -44,6 +46,7 @@
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^5.0.0",
     "mini-css-extract-plugin": "^2.7.2",
+    "puppeteer": "^19.6.1",
     "sass": "^1.56.2",
     "sass-loader": "^13.2.0",
     "sharp": "^0.31.3",
