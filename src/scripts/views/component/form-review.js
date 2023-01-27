@@ -17,7 +17,7 @@ class FormReview extends HTMLElement {
 
         <div class="form-group">
           <label for="review">Review</label>
-          <textarea  name="review" rows="4" placeholder="Write your review (please use polite words)" class="form-input" required></textarea>
+          <textarea name="review" rows="4" placeholder="Write your review (please use polite words)" class="form-input" required></textarea>
         </div>
 
         <div class="form-button">

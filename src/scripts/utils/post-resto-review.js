@@ -8,24 +8,10 @@ const PostRestoReview = {
       event.preventDefault();
       try {
         const formData = new FormData(event.target);
-        const reviewWrapper = document.querySelector('review-wrapper');
-        /**
-         * Souce code
-         * https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
-        */
-        const formObject = Array.from(formData.entries()).reduce((data, [key, value]) => ({
-          ...data,
-          [key]: value,
-        }), {});
-        const result = await RestoSource.postRestoReview(formObject);
-        reviewWrapper.item = result.customerReviews;
-
-        ToastComponent.init({
-          toastStatus: 'toastify--success',
-          toastMessage: 'Review sent successfully',
+        this._checkValueInput({
+          formData,
+          formWrapper: event.target,
         });
-
-        event.target.reset();
       } catch (err) {
         console.error(err);
         ToastComponent.init({
@@ -35,6 +21,36 @@ const PostRestoReview = {
       }
     });
   },
+
+  async _checkValueInput({ formData, formWrapper }) {
+    /**
+     * Souce code
+     * https://stackoverflow.com/questions/41431322/how-to-convert-formdata-html5-object-to-json
+    */
+    const formObject = Array.from(formData.entries()).reduce((data, [key, value]) => ({
+      ...data,
+      [key]: value,
+    }), {});
+
+    if (formObject.name.trim() || formObject.review.trim()) {
+      const reviewWrapper = document.querySelector('review-wrapper');
+
+      const result = await RestoSource.postRestoReview(formObject);
+      reviewWrapper.item = result.customerReviews;
+
+      ToastComponent.init({
+        toastStatus: 'toastify--success',
+        toastMessage: 'Review sent successfully',
+      });
+
+      formWrapper.reset();
+    } else {
+      ToastComponent.init({
+        toastStatus: 'toastify--failed',
+        toastMessage: 'Please insert correct value',
+      });
+    }
+  }
 };
 
 export default PostRestoReview;
