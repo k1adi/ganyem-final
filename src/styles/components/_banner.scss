@@ -18,19 +18,19 @@
 
   &--home{
     padding: 4.5rem 0;
-    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/home-banner.jpg') no-repeat center;
+    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/home-banner-sm.jpg') no-repeat center;
     background-size: cover;
   }
 
   &--favorite{
     padding: 3.5rem 0;
-    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/favorite-banner.jpg') no-repeat center;
+    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/favorite-banner-sm.jpg') no-repeat center;
     background-size: cover;
   }
 
   &--resto{
     padding: 3.5rem 0;
-    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/resto-banner.jpg') no-repeat center;
+    background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/resto-banner-sm.jpg') no-repeat center;
     background-size: cover;
   }
 
@@ -49,6 +49,57 @@
 
     &--home{
       padding: 6.5rem 0;
+    }
+  }
+
+  @include breakpoint-screen-min('lg'){
+    &--home{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/home-banner-md.jpg') no-repeat center;
+      background-size: cover;
+    }
+  
+    &--favorite{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/favorite-banner-md.jpg') no-repeat center;
+      background-size: cover;
+    }
+  
+    &--resto{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/resto-banner-md.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  @include breakpoint-screen-min('xl'){
+    &--home{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/home-banner.jpg') no-repeat center;
+      background-size: cover;
+    }
+  
+    &--favorite{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/favorite-banner.jpg') no-repeat center;
+      background-size: cover;
+    }
+  
+    &--resto{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/resto-banner.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  @include breakpoint-screen-min('xl'){
+    &--home{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/home-banner-lg.jpg') no-repeat center;
+      background-size: cover;
+    }
+  
+    &--favorite{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/favorite-banner-lg.jpg') no-repeat center;
+      background-size: cover;
+    }
+  
+    &--resto{
+      background:linear-gradient(150deg, rgba(27,27,27,0.5) 0%, rgba(27,27,27,0.5) 100%), url('./../images/banner/resto-banner-lg.jpg') no-repeat center;
+      background-size: cover;
     }
   }
 }

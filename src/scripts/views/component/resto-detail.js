@@ -3,6 +3,8 @@ import API_ENDPOINT from '../../global/api-endpoint';
 import { createRestoDetailPlaceholder, removeCurrentPlaceholder } from '../ui-component/placeholder';
 import './review-wrapper';
 import './form-review';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 class RestoDetail extends HTMLElement {
   set resto(data) {
@@ -22,7 +24,7 @@ class RestoDetail extends HTMLElement {
     this.innerHTML = `
       <div class="detail-wrapper__info">
         <div class="detail-card__image">
-          <img class="spinner">
+          <img class="lazyload spinner">
           <span class="detail-card__rating">
             <i class="fa-solid fa-star" aria-label="rating"></i> ${rating}
           </span>
