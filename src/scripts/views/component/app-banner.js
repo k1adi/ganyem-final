@@ -13,7 +13,7 @@ class AppBanner extends HTMLElement {
       <div class="container--wrap">
         <h1 class="banner__title ${this.titleAlign}">${this.bannerTitle}</h1>
         ${this.ctaStatus ? `
-          <a class="btn btn--primary" tabindex="0" data-target="#resto">${this.ctaText}</a>
+          <button class="btn btn--primary" data-target="#mainContent">${this.ctaText}</button>
         ` : ''}
       </div>
     `;

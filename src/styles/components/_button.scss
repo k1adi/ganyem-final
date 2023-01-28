@@ -3,6 +3,8 @@
 // -----------------------------------------------------------------------------
 
 .btn{
+  font-size: inherit;
+  font-family: inherit;
   display: inline-block;
   font-weight: 500;
   padding: .8rem 2rem;
@@ -12,5 +14,6 @@
   &--primary{
     color: black;
     background-color: $primary;
+    border: solid 1px $primary;
   }
 }
