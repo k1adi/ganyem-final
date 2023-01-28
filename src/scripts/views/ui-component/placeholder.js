@@ -1,5 +1,18 @@
 const createRestoPlaceholder = () => {
   let restoCardItem = '';
+  let placeholderDesc = '';
+
+  // eslint-disable-next-line no-plusplus
+  for (let maxDesc = 0; maxDesc < 6; maxDesc++) {
+    placeholderDesc += `
+      <span>
+        <div class="placeholder">
+          <div class="animation"></div>
+        </div>
+      </span>
+    `;
+  }
+
   // eslint-disable-next-line no-plusplus
   for (let maxCard = 0; maxCard < 6; maxCard++) {
     restoCardItem += `
@@ -7,6 +20,18 @@ const createRestoPlaceholder = () => {
         <div class="card--resto__image">
           <div class="placeholder">
             <div class="animation"></div>
+          </div>
+        </div>
+
+        <div class="card--resto__body">
+          <div class="card--resto__placeholder--title">
+            <div class="placeholder">
+              <div class="animation"></div>
+            </div>
+          </div>
+
+          <div class="card--resto__placeholder--desc">
+            ${placeholderDesc}
           </div>
         </div>
       </div>

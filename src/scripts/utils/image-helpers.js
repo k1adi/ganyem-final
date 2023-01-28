@@ -9,9 +9,10 @@ class ImageHelper {
   }
 
   _updateImage(imgSourceResult) {
+    this._imgElement.setAttribute('data-src', imgSourceResult);
     this._imgElement.setAttribute('src', imgSourceResult);
     this._imgElement.setAttribute('alt', this._imgAlt);
-    this._imgElement.removeAttribute('class');
+    this._imgElement.setAttribute('class', 'lazyload');
   }
 
   asyncLoadImage() {
