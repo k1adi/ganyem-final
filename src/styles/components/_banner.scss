@@ -50,6 +50,11 @@
     &--home{
       padding: 6.5rem 0;
     }
+
+    &--resto,
+    &--favorite{
+      padding: 4.5rem 0;
+    }
   }
 
   @include breakpoint-screen-min('lg'){
