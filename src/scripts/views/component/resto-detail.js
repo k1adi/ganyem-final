@@ -25,8 +25,8 @@ class RestoDetail extends HTMLElement {
       <div class="detail-wrapper__info">
         <div class="detail-card__image">
           <img class="lazyload spinner">
-          <span class="detail-card__rating">
-            <i class="fa-solid fa-star" aria-label="rating"></i> ${rating}
+          <span class="detail-card__rating" aria-label="rating">
+            <i class="fa-solid fa-star"></i> ${rating}
           </span>
         </div>
 
@@ -41,7 +41,7 @@ class RestoDetail extends HTMLElement {
           ${address}, ${city}
         </p>
         <div class="detail-card__section">
-          <h2>Resto Description: </h2>
+          <h2>Resto Description </h2>
           <p class="text--muted">${description}</p>
         </div>
       </div>
