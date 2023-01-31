@@ -26,7 +26,7 @@ class RestoWrapper extends HTMLElement {
     this.innerHTML = `
       <div class="card--resto__error">
         <h2 class="text--title">Oops...</h2>
-        <p>${message}</p>
+        ${message}
       </div>
     `;
   }

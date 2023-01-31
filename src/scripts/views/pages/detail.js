@@ -33,7 +33,7 @@ const Detail = {
     } catch (err) {
       console.error(err);
       likeButtonInitiator.innerHTML = '';
-      restoDetailWrapper.renderError('Failed to Fetch Restaurant Detail');
+      restoDetailWrapper.renderError('<p>Failed to Fetch Restaurant Detail</p>');
     }
   },
 };

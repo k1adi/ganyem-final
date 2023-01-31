@@ -21,7 +21,10 @@ const Favorite = {
     if (restos.length) {
       restoWrapper.restoList = restos;
     } else {
-      restoWrapper.renderError('Your Favorite Restaurant List is Empty');
+      restoWrapper.renderError(`
+        <p>There are no restaurants on your favorites list.</p>
+        <small>To add your favorite restaurants list, visit any of the restaurant detail pages and click the heart icon.</small>
+      `);
     }
   },
 };
