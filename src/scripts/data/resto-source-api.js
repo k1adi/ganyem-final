@@ -20,6 +20,18 @@ class RestoSource {
     }
   }
 
+  static async searchResto(query) {
+    try {
+      const response = await axios.get(`${API_ENDPOINT.SEARCH_RESTO}`, {
+        params:{ q: query }
+      });
+
+      return Promise.resolve(response.data);
+    } catch (err) {
+      throw new Error(err);
+    }
+  }
+
   static async postRestoReview(bodyJson) {
     try {
       const response = await axios.post(API_ENDPOINT.POST_REVIEW, bodyJson);

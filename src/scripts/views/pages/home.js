@@ -75,7 +75,10 @@ const Home = {
       `);
     } catch (err) {
       console.error(err);
-      restoWrapper.renderError('Failed to Fetch Restaurant Data');
+      restoWrapper.renderError(`
+        <p>Failed to Get Restaurant Data</p>
+        <small>You might try refreshing the page once again.</small>
+      `);
     }
 
     // Review Section

@@ -30,7 +30,7 @@ class ReviewWrapper extends HTMLElement {
                 <span class="swiper--review__resto-name">${data.restaurant}</span>
               ` : ''}
               ${(data?.rating) ? `
-              <span class="card__rating">
+              <span class="card__rating" aria-label="rating">
                 <i class="fa-solid fa-star"></i> ${data?.rating}
               </span>
               ` : ''}

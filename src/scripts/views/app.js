@@ -1,4 +1,4 @@
-import HeaderNav from '../utils/header-nav';
+import HeaderNavInitiator from '../utils/header-nav-initiator';
 import ToggleThemeInitiator from '../utils/toggle-theme-initiator';
 import LocalStorageHelper from '../utils/local-storage-helpers';
 import UrlParser from '../routes/url-parser';
@@ -20,7 +20,7 @@ class App {
   }
 
   _initialAppShell() {
-    this._initialNavMobile();
+    this._initialHeaderNavigation();
     this._initialToggleTheme();
     this._skipToMainContent();
 
@@ -29,15 +29,13 @@ class App {
     }
   }
 
-  _initialNavMobile() {
-    const headerNav = new HeaderNav({
+  _initialHeaderNavigation() {
+    HeaderNavInitiator.init({
       navList: this._navList,
       navToggle: this._navToggle,
       navToggleBtn: this._navToggleBtn,
       navToggleLabel: this._navToggleLabel,
     });
-
-    headerNav.init();
   }
 
   _initialToggleTheme() {
@@ -62,12 +60,9 @@ class App {
   }
 
   async renderPage() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const url = UrlParser.parseActiveUrlWithCombiner();
-    const page = (routes[url] !== undefined) ? routes[url] : routes['/not-found'];
+    const page = routes[url] || routes['/not-found'];
     this._mainContent.innerHTML = await page.render();
     await page.afterRender();
   }
