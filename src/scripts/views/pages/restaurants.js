@@ -10,7 +10,7 @@ const Restaurants = {
       <app-banner data-title="Restaurants" data-title-align="text-center" class="banner banner--resto"></app-banner>
 
       <section class="container--wrap container--padding-y"  id="mainContent">
-        <form-filter class="form--filter"></form-filter>
+        <form-filter class="form--filter" data-placeholder="Filter by Name, Category or Menu ..." data-page="restaurants"></form-filter>
         <resto-wrapper class="card-wrapper--resto margin-top-none"></resto-wrapper>
       </section>
     `;

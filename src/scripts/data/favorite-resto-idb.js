@@ -23,6 +23,11 @@ const FavoriteRestoIdb = {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
 
+  async searchResto(name) {
+    const allResto = await this.getAllResto();
+    return allResto.filter(resto => resto.name.toLowerCase().includes(name.toLowerCase()));
+  },
+
   async putResto(resto) {
     // eslint-disable-next-line no-prototype-builtins
     if (!resto.hasOwnProperty('id')) {

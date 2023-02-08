@@ -15,6 +15,7 @@ const Favorite = {
   },
 
   async afterRender() {
+    const mainContent = document.querySelector('#mainContent');
     const restoWrapper = document.querySelector('resto-wrapper');
     const restos = await FavoriteRestoIdb.getAllResto();
 
@@ -23,8 +24,13 @@ const Favorite = {
     } else {
       restoWrapper.renderError(`
         <p>There are no restaurants on your favorites list.</p>
-        <small>To add your favorite restaurants list, visit any of the restaurant detail pages and click the heart icon.</small>
+        <small>To add your favorite restaurants list, visit any of the restaurant detail pages and click the heart icon.</small><br>
+        <small>If you have < 6 favorite resto, filter resto will display to search resto by name</small>
       `);
+    }
+
+    if (restos.length >= 6) {
+      mainContent.insertAdjacentHTML('afterbegin', '<form-filter class="form--filter" data-placeholder="Filter by Name ..." data-page="favorite"></form-filter>')
     }
   },
 };
