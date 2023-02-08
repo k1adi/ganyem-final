@@ -25,11 +25,11 @@ const Favorite = {
       restoWrapper.renderError(`
         <p>There are no restaurants on your favorites list.</p>
         <small>To add your favorite restaurants list, visit any of the restaurant detail pages and click the heart icon.</small><br>
-        <small>If you have < 6 favorite resto, filter resto will display to search resto by name</small>
+        <small>If you have > 3 favorite resto, filter resto will display to search resto by name</small>
       `);
     }
 
-    if (restos.length >= 6) {
+    if (restos.length >= 3) {
       mainContent.insertAdjacentHTML('afterbegin', '<form-filter class="form--filter" data-placeholder="Filter by Name ..." data-page="favorite"></form-filter>')
     }
   },
