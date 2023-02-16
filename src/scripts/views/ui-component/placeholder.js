@@ -43,7 +43,8 @@ const createRestoPlaceholder = () => {
 
 const createRestoDetailPlaceholder = () => {
   let placeholderDesc = '';
-  let placeholderSection = '';
+  let placeholderMenu = '';
+  let placeholderMenuList = '';
 
   // eslint-disable-next-line no-plusplus
   for (let maxDesc = 0; maxDesc < 8; maxDesc++) {
@@ -57,11 +58,28 @@ const createRestoDetailPlaceholder = () => {
   }
 
   // eslint-disable-next-line no-plusplus
-  for (let maxSection = 0; maxSection < 3; maxSection++) {
-    placeholderSection += `
-      <div class="detail-card__placeholder--section">
+  for (let maxMenuList = 0; maxMenuList < 6; maxMenuList++) {
+    placeholderMenuList += `
+      <span>
         <div class="placeholder">
           <div class="animation"></div>
+        </div>
+      </span>
+    `;
+  }
+
+  // eslint-disable-next-line no-plusplus
+  for (let maxMenu = 0; maxMenu < 2; maxMenu++) {
+    placeholderMenu += `
+      <div class="detail-card__section">
+        <div class="detail-card__placeholder--menu-title">
+          <div class="placeholder">
+            <div class="animation"></div>
+          </div>
+        </div>
+
+        <div class="detail-card__placeholder--menu-list">
+          ${placeholderMenuList}
         </div>
       </div>
     `;
@@ -81,14 +99,37 @@ const createRestoDetailPlaceholder = () => {
           <div class="animation"></div>
         </div>
       </div>
+
+      <div class="detail-card__placeholder--desc">
+        ${placeholderDesc}
+      </div>
     </div>
   </div>
   <div class="detail-wrapper__desc">
-    <div class="detail-card__placeholder--desc">
-      ${placeholderDesc}
+    <div class="detail-wrapper__card">
+      ${placeholderMenu}
     </div>
-    
-    ${placeholderSection}
+
+    <div class="detail-wrapper__card">
+      <div class="detail-card__placeholder--review">
+        <span>
+          <div class="placeholder">
+            <div class="animation"></div>
+          </div>
+        </span>
+        <span>
+          <div class="placeholder">
+            <div class="animation"></div>
+          </div>
+        </span>
+      </div>
+
+      <div class="detail-card__placeholder--section">
+        <div class="placeholder">
+          <div class="animation"></div>
+        </div>
+      </div>
+    </div>
   </div>
   `;
 };

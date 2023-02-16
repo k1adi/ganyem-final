@@ -36,7 +36,7 @@ $bg-light-muted: #E4E4E4 !default;
 $txt-light: #EFF0F1 !default;
 $txt-light-muted: #818991 !default;
 $nav-light: #D6D6D6 !default;
-$box-shadow-light: rgba(128, 128, 128, 0.2) !default;
+$box-shadow-light: rgba(128, 128, 128, 0.15) !default;
 
 /// Dark Theme List
 /// @type Color
@@ -45,7 +45,7 @@ $bg-dark-muted: #414141 !default;
 $txt-dark: $bg-dark !default;
 $txt-dark-muted: #C0C5CA !default;
 $nav-dark: rgba(129, 99, 1, 0.5) !default;
-$box-shadow-dark: rgb(61, 61, 61) !default;
+$box-shadow-dark: rgba(61, 61, 61, .7) !default;
 
 /// Light & Dark Theme Array
 /// 1. background-color, 2. background-color-muted, 3. navigation-border

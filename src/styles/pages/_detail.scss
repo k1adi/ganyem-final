@@ -10,9 +10,19 @@
     &__desc{
       flex-basis: 100%;
       width: 100%;
+    }
+
+    &__info,
+    &__card{
       padding: 1rem;
       border-radius: .5rem;
       @include box-shadow('0px', '5px', '15px', '0px', var(--box-shadow));
+    }
+
+    &__card{
+      &:not(:last-child){
+        margin-bottom: 1.75rem;
+      }
     }
 
     &__error{
@@ -45,12 +55,12 @@
         display: block;
         width: 80%;
         height: 2rem;
+        margin-bottom: 1.25rem;
       }
 
       &--desc{
         display: grid;
         gap: .5rem;
-        margin-bottom: 1.25rem;
         grid-template-columns: repeat(auto-fill, 1fr);
 
         span{
@@ -92,10 +102,42 @@
         }
       }
 
+      &--menu{
+        &-title{
+          display: block;
+          width: 80%;
+          max-width: 400px;
+          height: 2rem;
+          margin-bottom: 1.25rem;
+        }
+
+        &-list{
+          display: grid;
+          gap: .65rem;
+          grid-template-columns: repeat(3, 1fr);          
+
+          span{
+            height: 2.25rem;
+          }
+        }
+      }
+
+
+
       &--section{
         display: block;
         height: 7rem;
-        margin-bottom: 1rem;
+      }
+
+      &--review{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+
+        span{
+          height: 7rem;
+          margin-bottom: 1rem;
+        }
       }
     }
 
@@ -155,7 +197,7 @@
     &__menu{
       list-style-type: none;
       padding: 0;
-      margin: 1rem 0;
+      margin: 1rem 0 0;
 
       li{
         display: inline-block;
@@ -164,7 +206,7 @@
         border-radius: .5rem;
         font-weight: 500;
         @include transition(.25s);
-        @include box-shadow('0px', '5px', '15px', '0px', var(--box-shadow));
+        @include box-shadow('0px', '0px', '15px', '0px', var(--box-shadow));
         
         &:hover{
           background-color: $primary;
@@ -177,6 +219,10 @@
       display: block;
       position: relative;
       margin-bottom: 2rem;
+
+      &:last-child{
+        margin-bottom: 0 !important;
+      }
 
       h2{
         margin-bottom: .25rem;
@@ -215,6 +261,11 @@
         flex-basis: calc(100% - 300px - 1.5rem);
         max-width: calc(100% - 300px - 1.5rem);
       }
+
+      &__info,
+      &__card{
+        padding: 1.5rem;
+      }
     }
   }
 
@@ -226,7 +277,6 @@
       }
   
       &__desc{
-        padding: 1.5rem;
         flex-basis: calc(100% - 450px - 1.5rem);
         max-width: calc(100% - 450px - 1.5rem);
       }
