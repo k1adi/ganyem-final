@@ -5,7 +5,7 @@ class AppFooter extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <p>Made with <span class="visual-hidden">love</span> ❤️ by Rizki Adi</p>
+      <p>Made with <span class="visually-hidden hide-text">love</span> <i class="fa-heart footer__icon"></i> by Rizki Adi</p>
       <small>Final Submission Dicoding <a href="https://www.dicoding.com/academies/219" class="footer__link">Front-End Expert</a> </small>
     `;
   }

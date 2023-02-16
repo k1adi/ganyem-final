@@ -9,22 +9,22 @@ const Home = {
   async render() {
     const howToOrderList = [
       {
-        icon: 'fa-solid fa-shop',
+        icon: 'fa-resto',
         title: 'Find Resto',
         desc: 'Choose nearest restaurant to you or choose the best rating restaurant in town.',
       },
       {
-        icon: 'fa-solid fa-basket-shopping',
+        icon: 'fa-cart',
         title: 'Select menu',
         desc: 'Select the food or drink menu you want from the restaurant that you have chosen before.',
       },
       {
-        icon: 'fa-solid fa-cash-register',
+        icon: 'fa-wallet',
         title: 'Checkout Order',
         desc: 'Pay for the order you have chosen by cash and non-cash to be ready processing.',
       },
       {
-        icon: 'fa-solid fa-clock-rotate-left',
+        icon: 'fa-wait',
         title: 'Wait for Serve',
         desc: 'So from here the resto ready to prepare your menu for delivery or self-pickup.',
       },

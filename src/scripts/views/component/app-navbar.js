@@ -8,7 +8,7 @@ class AppNavbar extends HTMLElement {
   render() {
     this.innerHTML = `
       <button class="toggle-theme" aria-pressed="false">
-        <i class="fa-solid fa-circle-half-stroke toggle-theme__icon"></i>
+        <i class="fa-circle-half toggle-theme__icon"></i>
         <span class="toggle-theme__text">Toggle High Contrast</span>
       </button>
       <nav class="nav">
