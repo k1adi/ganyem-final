@@ -11,7 +11,10 @@ class FormFilter extends HTMLElement {
     this.innerHTML = `
       <form class="form--filter-wrapper">
         <input type="search" name="resto-name" class="form--filter__input" placeholder="${this.placeholder}">
-        <input type="submit" class="form--filter__button" value="Search">
+        <!-- <input type="submit" class="form--filter__button" value="Search"> -->
+        <button type="submit" class="form--filter__button">
+          <i class="fa-search"></i> Search
+        </button>
       </form>
     `;
 

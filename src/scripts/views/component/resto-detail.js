@@ -26,7 +26,7 @@ class RestoDetail extends HTMLElement {
         <div class="detail-card__image">
           <img class="lazyload spinner">
           <span class="detail-card__rating" aria-label="rating">
-            <i class="fa-solid fa-star"></i> ${rating}
+            <i class="fa-star"></i> ${rating}
           </span>
         </div>
 
@@ -47,32 +47,36 @@ class RestoDetail extends HTMLElement {
       </div>
 
       <div class="detail-wrapper__desc">
-        <div class="detail-card__section">
-          <h2>Food's</h2>
-          <ol class="detail-card__menu" aria-label="Food menu list">
-            ${menus.foods.map((item) => `
-              <li>${item.name}</li>
-            `).join('')}
-          </ol>
+        <div class="detail-wrapper__card">
+          <div class="detail-card__section">
+            <h2>Food's</h2>
+            <ol class="detail-card__menu" aria-label="Food menu list">
+              ${menus.foods.map((item) => `
+                <li>${item.name}</li>
+              `).join('')}
+            </ol>
+          </div>
+
+          <div class="detail-card__section">
+            <h2>Drink's</h2>
+            <ol class="detail-card__menu" aria-label="Drink menu list">
+              ${menus.drinks.map((item) => `
+                <li>${item.name}</li>
+              `).join('')}
+            </ol>
+          </div>
         </div>
 
-        <div class="detail-card__section">
-          <h2>Drink's</h2>
-          <ol class="detail-card__menu" aria-label="Drink menu list">
-            ${menus.drinks.map((item) => `
-              <li>${item.name}</li>
-            `).join('')}
-          </ol>
-        </div>
+        <div class="detail-wrapper__card">
+          <div class="detail-card__section">
+            <h2>Customer Review's</h2>
+            <review-wrapper></review-wrapper>
+          </div>
 
-        <div class="detail-card__section">
-          <h2>Customer Review's</h2>
-          <review-wrapper></review-wrapper>
-        </div>
-
-        <div class="detail-card__section">
-          <h2>Post a Review</h2>
-          <form-review></form-review>
+          <div class="detail-card__section">
+            <h2>Post a Review</h2>
+            <form-review></form-review>
+          </div>
         </div>
       </div>
     `;

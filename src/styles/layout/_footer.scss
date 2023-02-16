@@ -8,6 +8,10 @@
   }
 
   .footer{
+    &__icon{
+      color: #FE251B;
+    }
+
     &__link{
       color: inherit;
       padding: 1rem 0;
