@@ -2,13 +2,15 @@ import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 
 const ToastComponent = {
-  init({ toastStatus, toastMessage }) {
+  init({ toastStatus, toastMessage, toastGravity = 'top', toastPosition = 'right'}) {
     Toastify({
-      text: toastMessage,
-      duration: 10000,
-      className: toastStatus,
       close: true,
+      text: toastMessage,
+      gravity: toastGravity,
+      position: toastPosition,
+      duration: 5000,
       ariaLive: 'polite',
+      className: toastStatus,
     }).showToast();
   },
 };

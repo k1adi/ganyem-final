@@ -8,6 +8,10 @@
   &--failed{
     background: $failed !important;
   }
+
+  &--muted{
+    background: $grey !important;
+  }
 }
 
 .toast{

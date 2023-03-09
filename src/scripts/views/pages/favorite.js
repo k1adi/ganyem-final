@@ -23,9 +23,9 @@ const Favorite = {
       restoWrapper.restoList = restos;
     } else {
       restoWrapper.renderError(`
-        <p>There are no restaurants on your favorites list.</p>
-        <small>To add your favorite restaurants list, visit any of the restaurant detail pages and click the heart icon.</small><br>
-        <small>If you have > 3 favorite resto, filter resto will display to search resto by name</small>
+        <p>There are no restaurant on your favorite lists.</p>
+        <small>To add your favorite restaurant lists, visit any of the restaurant detail pages and click the heart icon.</small><br>
+        <small>If you have > 3 favorite restaurants, form filter will display to search restaurants by name</small>
       `);
     }
 

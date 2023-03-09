@@ -89,10 +89,10 @@ module.exports = {
           },
         },
         {
-          urlPattern: /https:\/\/use.fontawesome.com\/2678a3056c.css/,
+          urlPattern: /https:\/\/dev.iconly.io\/public\/oQGRpPcFZWtk\/iconly.css/,
           handler: 'CacheFirst',
           options: {
-            cacheName: 'fontawesome-font-stylesheet',
+            cacheName: 'iconly-font-stylesheet',
             cacheableResponse: {
               statuses: [0, 200],
             },
