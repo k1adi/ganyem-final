@@ -8,6 +8,8 @@ import swRegister from './utils/sw-register';
 import './views/component/app-navbar';
 import './views/component/app-footer';
 
+import ToastComponent from './views/ui-component/toast';
+
 const app = new App({
   appBody: document.querySelector('body'),
   skipButton: document.querySelector('#skip-to-content'),
@@ -26,4 +28,22 @@ window.addEventListener('hashchange', async () => {
 window.addEventListener('DOMContentLoaded', async () => {
   await app.renderPage();
   await swRegister();
+});
+
+window.addEventListener('offline', () => {
+  ToastComponent.init({
+    toastStatus: 'toastify--muted',
+    toastMessage: 'You\'re offline. Check your connection.',
+    toastGravity: 'bottom',
+    toastPosition: 'center',
+  });
+});
+
+window.addEventListener('online', () => {
+  ToastComponent.init({
+    toastStatus: 'toastify--success',
+    toastMessage: 'Yeay you\'re online.',
+    toastGravity: 'bottom',
+    toastPosition: 'center',
+  });
 });
