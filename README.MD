@@ -54,8 +54,8 @@ Alternatively, you can directly access the deployed web application at https://g
 - Add or remove favorite resto.
 
 ## Submission info
-![Submission-1 info](screenshoot/submission-1.jpg)
-![Submission-2 info](screenshoot/submission-2.jpg)
+![Submission-1 info](screenshoot/submission-1.png)
+![Submission-2 info](screenshoot/submission-2.png)
 ![Submission-3 info](screenshoot/submission-3.jpg)
 ![Timeline](screenshoot/timeline.jpg)
 > *If you see 'Enrollment Type: Unknown', it is because of my misunderstanding and the delay in submitting the assignment. I was able to complete the class more than 2 days beyond the timeline set by IDCamp.*
