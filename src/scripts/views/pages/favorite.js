@@ -30,7 +30,7 @@ const Favorite = {
     }
 
     if (restos.length >= 3) {
-      mainContent.insertAdjacentHTML('afterbegin', '<form-filter class="form--filter" data-placeholder="Filter by Name ..." data-page="favorite"></form-filter>')
+      mainContent.insertAdjacentHTML('afterbegin', '<form-filter class="form--filter" data-placeholder="Filter by Name ..." data-page="favorite"></form-filter>');
     }
   },
 };

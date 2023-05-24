@@ -2,6 +2,7 @@ import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 
 const ToastComponent = {
+  // eslint-disable-next-line
   init({ toastStatus, toastMessage, toastGravity = 'top', toastPosition = 'right'}) {
     Toastify({
       close: true,

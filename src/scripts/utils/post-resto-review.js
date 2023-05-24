@@ -50,7 +50,7 @@ const PostRestoReview = {
         toastMessage: 'Please insert correct value',
       });
     }
-  }
+  },
 };
 
 export default PostRestoReview;

@@ -1,4 +1,5 @@
 const HeaderNavInitiator = {
+  // eslint-disable-next-line
   init({ navList, navToggle, navToggleBtn, navToggleLabel }) {
     this._navItem = '';
     this._navList = navList;

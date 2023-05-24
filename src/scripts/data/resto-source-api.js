@@ -23,7 +23,7 @@ class RestoSource {
   static async searchResto(query) {
     try {
       const response = await axios.get(`${API_ENDPOINT.SEARCH_RESTO}`, {
-        params:{ q: query }
+        params: { q: query },
       });
 
       return Promise.resolve(response.data);

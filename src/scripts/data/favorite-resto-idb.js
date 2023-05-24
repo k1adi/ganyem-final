@@ -25,7 +25,7 @@ const FavoriteRestoIdb = {
 
   async searchResto(name) {
     const allResto = await this.getAllResto();
-    return allResto.filter(resto => resto.name.toLowerCase().includes(name.toLowerCase()));
+    return allResto.filter((resto) => resto.name.toLowerCase().includes(name.toLowerCase()));
   },
 
   async putResto(resto) {

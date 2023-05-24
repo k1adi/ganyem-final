@@ -19,10 +19,10 @@ const FormFilterResto = {
         }
 
         this._getAllResto();
-      } catch(err) {
+      } catch (err) {
         console.error(err);
         this._handleError(`
-          <p>Failed to search resto with keyword "${restoName}"</p>
+          <p>Failed to search resto with keyword "${this._queryResto}"</p>
         `);
       }
     });
@@ -30,7 +30,7 @@ const FormFilterResto = {
 
   async _getFilterResto() {
     let result;
-    
+
     if (this._formPage === 'restaurants') {
       result = await RestoSource.searchResto(this._queryResto);
       this._handleSuccess(result.restaurants);
@@ -67,7 +67,7 @@ const FormFilterResto = {
 
   _handleError(msg) {
     this._restoWrapper.renderError(msg);
-  }
+  },
 };
 
 export default FormFilterResto;
